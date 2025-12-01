@@ -4,39 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Tyler G.</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Populate current date in the date div and write a message to the console
+        document.addEventListener("DOMContentLoaded", function () {
+            const dateDiv = document.getElementById("current-date");
+            if (dateDiv) {
+                const today = new Date();
+                dateDiv.textContent = today.toDateString();
+            }
+            console.log("Resume page loaded successfully.");
+        });
+    </script>
 </head>
-<!-- Body, needs:
-* span, done
-* <lb>
-* <p>, done
-* <hr>, done
-* <div> for date, 
-* links done
-* lists, done
-* tables
-* strong done, em  -->
 <body>
     <!-- Top Header & Nav -->
     <header>
         <section id="nav-left">
-            <h1> Tyler Gerace </h1>
-            <h2> Software Engineer </h2>
+            <h1>Tyler Gerace</h1>
+            <h2>Software Engineer</h2>
         </section>
         <section id="nav-right">
             <nav>
-                <a href="resume.html"> Resume</a> |
-                <a href="cover-letter.html"> Cover Letter</a> |
-                <a href="career-goals.html"> Career Goals</a>
+                <a href="resume.html">Resume</a> |
+                <a href="cover-letter.html">Cover Letter</a> |
+                <a href="career-goals.html">Career Goals</a>
             </nav>
         </section>
         <hr>
-            <ul id="contact-info">
-                <li> +1 480 815 4826 </li>
-                <li> tylerg.dev@gmail.com </li>
-                <li> github.com/tylerg-dev </li>
-                <li> FLG, AZ</li>
-            </ul>
+        <div id="current-date-container">
+            <strong>Today&apos;s Date:</strong>
+            <div id="current-date"></div>
+        </div>
+        <hr>
+        <ul id="contact-info">
+            <li>+1 480 815 4826</li>
+            <li>tylerg.dev@gmail.com</li>
+            <li><a href="https://github.com/tylerg-dev" target="_blank">github.com/tylerg-dev</a></li>
+            <li>Flagstaff, AZ</li>
+        </ul>
         <hr>
     </header>
 
@@ -46,26 +52,58 @@
             <h2>Summary</h2>
             <p>
                 <span>Software engineer major with a passion for developing innovative programs</span>
-                <span>that expedite the efficiency and effectiveness of organizational success. <lb>
-                in various programming languages and tools.</lb></span>
-                <article>
-                    <em>Key Skills:</em>
-                    <ul>
-                        <li>Problem Solving</li>
-                        <li>Team Collaboration</li> 
-                    </ul>
-                </article>
+                <span>that expedite the efficiency and effectiveness of organizational success.<br>
+                Experienced in various programming languages and tools.</span>
             </p>
+            <article>
+                <em>Key Skills:</em>
+                <ul>
+                    <li>Problem Solving</li>
+                    <li>Team Collaboration</li>
+                </ul>
+            </article>
         </section>
     <!-- heading 2: skills -->
         <section id="skills">
             <h2>Skills</h2>
             <ul>
-                <li> <strong>Programming Languages:</strong> Python, Java, C++</li>
-                <li> <strong>Web Development:</strong> HTML, CSS, JavaScript</li>
-                <li> <strong>Databases:</strong> MySQL, MongoDB</li>
-                <li> <strong>Tools:</strong> Git, Docker, Jenkins</li>
+                <li><strong>Programming Languages:</strong> Python, Java, C++</li>
+                <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
+                <li><strong>Databases:</strong> MySQL, MongoDB</li>
+                <li><strong>Tools:</strong> Git, Docker, Jenkins</li>
             </ul>
+
+            <table>
+                <caption>Skills Overview</caption>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Primary Tools</th>
+                        <th>Experience Level</th>
+                        <th>Years</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Programming</td>
+                        <td>Python, Java, C++</td>
+                        <td>Intermediate</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Web Development</td>
+                        <td>HTML, CSS, JavaScript</td>
+                        <td>Intermediate</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Tools &amp; DevOps</td>
+                        <td>Git, Docker, Jenkins</td>
+                        <td>Beginner</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     <!-- heading 3: experience -->
         <section id="experience">
